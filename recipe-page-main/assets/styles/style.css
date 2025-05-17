@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Young serif';
+    src: url(../fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url(../fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*COLORS*/
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-50: hsl(330, 100%, 98%);
+    --rose-800: hsl(332, 51%, 32%);
+
+    /*TYPOGRAPHY*/
+    --body-copy-font-size: 16px;
+    --young-serif: 'Young serif';
+    --outfit: 'Outfit'
+}
+
+body {
+    font-family: var(--outfit);
+    font-size: var(--body-copy-font-size);
+    color: var(--stone-600);
+}
+
+header {
+    height: 300px;
+    background-image: url('..//images/image-omelette.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+main {
+    margin: 0 auto;
+    padding: 2em;
+    min-width: 375px;
+}
+
+main h1 {
+    font-family: var(--young-serif);
+    font-size: 2.5em;
+    color: var(--stone-900);
+    margin-bottom: 10px;
+}
