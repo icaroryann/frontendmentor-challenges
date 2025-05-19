@@ -36,11 +36,9 @@ body {
     color: var(--stone-600);
 }
 
-h1, h2, p {
-    margin-bottom: 30px;
-}
-
 p {
+    /*margin-top: 30px;*/
+    margin-top: 10px;
     font-size: var(--body-copy-font-size);
     line-height: 1.5em;
 }
@@ -55,18 +53,88 @@ header {
 
 main {
     margin: 0 auto;
-    padding: 2em;
+    padding: 0 2em;
     max-width: 375px;
 }
 
 main h1 {
+    margin-bottom: 20px;
     font-family: var(--young-serif);
     font-size: 2em;
     line-height: 1em;
     color: var(--stone-900);
 }
 
-main div.time {
+section {
+    margin: 30px auto;
+}
+
+section ul, section ol {
+    margin-left: 25px;
+}
+
+section ul li p, section ol li p{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+section ol li::marker{
+    color: var(--brown-800);
+    font-weight: bold;
+}
+
+section h2 {
+    font-family: var(--young-serif);
+    color: var(--brown-800);
+}
+
+section.time {
     padding: 25px;
+    padding-right: 26px;
     background-color: var(--rose-50);
+}
+
+section.time > h2 {
+    color: var(--rose-800);
+}
+
+section.time ul li {
+    margin-left: 30px;
+    margin: 0 30px;
+}
+
+section.time ul li p {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+section div.nutrition {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    gap: 20px;
+    justify-content: center;
+}
+
+section div.nutrition hr {
+    grid-column: 1/3;
+    margin: 0;
+}
+
+section div.nutrition strong {
+    color: var(--brown-800);
+}
+
+hr {
+    margin-top: 30px;
+    border: 1px solid var(--stone-100);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    margin-bottom: 30px;
+}
+.attribution a { 
+    color: var(--brown-800);
+    text-decoration: none;
 }
