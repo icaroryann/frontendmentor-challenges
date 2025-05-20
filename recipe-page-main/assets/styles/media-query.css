@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+header, main {
+    max-width: 768px;
+}
+
+header {
+    height: 300px;
+    margin: 30px auto 0 auto;
+    padding: 30px;
+    border: 32px solid;
+    background: none;
+    background: red url('../images/image-omelette.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
