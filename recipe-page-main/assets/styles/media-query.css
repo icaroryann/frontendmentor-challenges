@@ -1,19 +1,50 @@
+:root {
+    /*COLORS*/
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-50: hsl(330, 100%, 98%);
+    --rose-800: hsl(332, 51%, 32%);
+
+    /*TYPOGRAPHY*/
+    --body-copy-font-size: 16px;
+    --young-serif: 'Young serif';
+    --outfit: 'Outfit'
+}
+
 * {
     box-sizing: border-box;
 }
 
-header, main {
+body {
+    background: var(--stone-100);
+}
+
+.container {
+    background: white;
     max-width: 768px;
+    margin: 40px auto;
+    border: 1px solid transparent;
+    border-radius: 20px;
 }
 
 header {
     height: 300px;
-    margin: 30px auto 0 auto;
-    padding: 30px;
-    border: 32px solid;
-    background: none;
-    background: red url('../images/image-omelette.jpeg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin: 0 32px;
+    margin-top: 32px;
+    border-radius: 20px;
+    background-size: cover;
+}
 
+section div.nutrition {
+    grid-template-columns: auto auto;
+    justify-content: normal;
+    margin-left: 30px;
+}
+
+.attribution {
+    margin-bottom: 10px;
 }
