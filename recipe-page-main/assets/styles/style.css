@@ -54,7 +54,7 @@ header {
 main {
     margin: 0 auto;
     padding: 0 2em;
-    min-width: 375;
+    min-width: 375px;
 }
 
 main h1 {
