@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+main > a:hover {
+    background-color: var(--Green);
+    color: var(--Grey-700);
+}
