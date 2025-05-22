@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-main > a:hover {
+section.social-links > a:hover {
     background-color: var(--Green);
     color: var(--Grey-700);
 }
