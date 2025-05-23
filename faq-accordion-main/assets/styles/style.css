@@ -27,14 +27,56 @@ body {
     background-image: url(../images/background-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -54rem;
+    background-position-y: -400px;
 }
 
 main {
-    margin: 3rem auto;
+    position: absolute;
+    top: 10em;
+    left: 50%;
+    align-content: center;
+    margin:auto;
     padding: 2rem 2rem;
     width: 375px;
     background-color: var(--white);
     border-radius: 10px;
+    transform: translate(-50%);
+}
 
+header > h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--purple-950);
+}
+
+header > h1 > img {
+    width: 0.7em;
+    margin-right: 1.5rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    justify-items: start;
+    align-items: center;
+    margin-top: 1em;
+}
+
+section > h2 {
+    font-size: 1.1em;
+    color: var(--purple-950);
+}
+
+section > img {
+    cursor: pointer;
+}
+
+section > p {
+    grid-column: 1 / span 2;
+    margin-top: 1em;
+    color: var(--purple-600);
+}
+
+section > p.hidden {
+    display: none;
 }
