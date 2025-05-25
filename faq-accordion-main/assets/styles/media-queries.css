@@ -1,0 +1,9 @@
+body {
+    background-image: url(../images/background-pattern-desktop.svg);
+    background-position-y: 0px;
+    background-size: contain;
+}
+
+main {
+    width: 600px;
+}

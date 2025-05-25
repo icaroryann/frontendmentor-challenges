@@ -37,7 +37,7 @@ main {
     align-content: center;
     margin:auto;
     padding: 2rem 2rem;
-    width: 375px;
+    width: 345px;
     background-color: var(--white);
     border-radius: 10px;
     transform: translate(-50%);
@@ -75,8 +75,12 @@ section > p {
     grid-column: 1 / span 2;
     margin-top: 1em;
     color: var(--purple-600);
+    transition: max-height 0.4s allow-discrete, opacity 0.4s;
 }
 
 section > p.hidden {
-    display: none;
+    /*display: none;*/
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
 }
