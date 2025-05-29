@@ -22,7 +22,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://icaroryann.github.io/frontendmentor-challenges/recipe-page-main/)
+- [Live Site URL](https://icaroryann.github.io/frontendmentor-challenges/faq-accordion-main/)
 
 ## My process
 
@@ -30,7 +30,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 - Semantic HTML5 markup
 - CSS custom properties
-- CSS Grid
+- CSS Flex
 - Mobile-first workflow
 
 ### What I learned
