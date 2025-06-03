@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+:root {
+    /* Colors */
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Typography */
+    --bod-copy-font-size-paragraphs: 18px;
+    --font-family: 'Hanken Grotesk';
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-family);
+}
+
+p {
+    font-size: var(--bod-copy-font-size-paragraphs);
+}
+
+main {
+    max-width: 375px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    padding: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-image: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    color: var(--White);
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+header > h1 {
+    font-size: 1.1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.301);
+}
+
+header > .res {
+    width: 100px;
+    height: 100px;
+    margin-top: 1em;
+    /*border: 1px solid black;*/
+    border-radius: 50%;
+    background-image: linear-gradient(0deg, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.res strong {
+    font-size: 2.5em;
+}
+
+.res > span.total {
+    color: var(--Light-lavender);
+    font-size: .8em;
+}
+
+header > .level-satisfaction {
+    font-size: 1.4em;
+    margin-top: 1em;
+}
+
+header > p {
+    text-align: center;
+    color: var(--Light-lavender);
+    margin-top: 1em;
+}
