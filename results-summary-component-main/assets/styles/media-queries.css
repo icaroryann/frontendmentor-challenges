@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Pale-blue);
+}
+
+.page-container {
+    min-width: auto;
+    min-height: auto;
+    /*min-height: auto;*/
+    max-width: 600px;
+    max-height: 600px;
+    flex-flow: row nowrap;
+    border-radius: 30px;
+}
+
+main {
+    justify-content: center;
+}
+
+header {
+    border-radius: 30px;
+}
+
+header > .res {
+    width: 200px;
+    height: 200px;
+}
+
+.res strong {
+    font-size: 4em;
+}
+
+section {
+    width: auto;
+    flex-shrink: 0;
+}

@@ -50,11 +50,18 @@ p {
     font-size: var(--bod-copy-font-size-paragraphs);
 }
 
-main {
+.page-container {
+    background-color: var(--White);
     min-width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    display: flex;
 }
 
 header {
@@ -109,6 +116,7 @@ header > p {
 
 section {
     padding: 2em;
+    width: 100%;
 }
 
 section > h2 {
