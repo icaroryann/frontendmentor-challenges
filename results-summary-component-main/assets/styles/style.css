@@ -43,6 +43,7 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     font-family: var(--font-family);
+    overflow: hidden;
 }
 
 p {
@@ -53,6 +54,7 @@ main {
     min-width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 header {
