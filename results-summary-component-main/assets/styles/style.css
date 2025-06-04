@@ -50,7 +50,7 @@ p {
 }
 
 main {
-    max-width: 375px;
+    min-width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
 }
@@ -78,7 +78,7 @@ header > .res {
     margin-top: 1em;
     /*border: 1px solid black;*/
     border-radius: 50%;
-    background-image: linear-gradient(0deg, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    background-image: linear-gradient(var(--Violet-blue-circle) 10%, var(--Persian-blue-circle) 100%);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -103,4 +103,85 @@ header > p {
     text-align: center;
     color: var(--Light-lavender);
     margin-top: 1em;
+}
+
+section {
+    padding: 2em;
+}
+
+section > h2 {
+    /*margin-top: 1em;*/
+    font-size: 1.2em;
+}
+
+section > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+section > ul > li {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+section > ul > li > h3 {
+    flex-grow: 1;
+}
+
+section > ul > li > .score > p {
+    color: var(--Light-lavender);
+}
+
+section > ul > li > .score > p > strong {
+    color: black;
+}
+
+section > ul > .reaction {
+    background-color: hsla(0, 100%, 67%, 0.082);
+}
+
+section > ul > .reaction > h3 {
+    color: var(--Light-red);
+}
+
+section > ul > .memory {
+    background-color: hsl(39, 100%, 56%, 0.082);
+}
+
+section > ul > .memory > h3 {
+    color: var(--Orangey-yellow);
+}
+
+section > ul > .verbal {
+    background-color: hsl(166, 100%, 37%, 0.082);
+}
+
+section > ul > .verbal > h3 {
+    color: var(--Green-teal);
+}
+
+section > ul > .visual {
+    background-color: hsl(234, 85%, 45%, 0.082);
+}
+
+section > ul > .visual > h3 {
+    color: var(--Cobalt-blue);
+}
+
+section > button {
+    width: 100%;
+    padding: 1.5em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+}
+
+section > button:active {
+    background-image: linear-gradient(0deg, var(--Light-royal-blue-background), var(--Violet-blue-circle));
 }
