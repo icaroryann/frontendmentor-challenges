@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /*Primary*/
+    --Very-Dark-Magenta: hsl(300, 43%, 22%); 
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /*Neutral*/
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    /**************/
+    /* Typography */
+    /**************/
+
+    /*Body Copy*/
+    --Font-size: 15px;
+
+    /*Font*/
+    --Font-Family: "League Spartan", sans-serif;
+    --Weights-400: 400;
+    --Weights-500: 500;
+    --Weights-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+p {
+    font-size: var(--Font-size);
+    line-height: 1.2em;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--Font-Family);
+}
+
+main {
+    max-width: 320px;
+    margin: 4rem auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+main > h1 {
+    color: var(--Very-Dark-Magenta);
+    text-align: center;
+    font-size: 2.5em;
+    line-height: .8em;
+}
+
+main > .reviews {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+main > .reviews > li {
+    list-style: none;
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .reviews > li > img{
+    height: 1em;
+    width: 1em;
+}
+
+main > .reviews > li > strong {
+    color: var(--Very-Dark-Magenta);
+}
+
+main > .feedbacks > li {
+    background-color: var(--Very-Dark-Magenta);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding: 2rem;
+    position: relative;
+    text-align: jus;
+}
+
+main > .feedbacks > li > img {
+    width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+}
