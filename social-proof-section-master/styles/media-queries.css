@@ -1,8 +1,5 @@
-body {
-    /*min-height: auto;*/
-}
-
 main {
+    padding: 0 2rem;
     max-width: 1080px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
