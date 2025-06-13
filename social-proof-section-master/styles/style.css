@@ -41,8 +41,6 @@ p {
 }
 
 body {
-    min-width: 100vw;
-    min-height: 100vh;
     font-family: var(--Font-Family);
 }
 
@@ -76,6 +74,7 @@ main > .reviews > li {
     list-style: none;
     background-color: var(--Light-Grayish-Magenta);
     padding: 1rem;
+    border-radius: 1rem;
     display: flex;
     flex-flow: column nowrap;
     gap: .5em;
@@ -87,9 +86,16 @@ main > .reviews > li > strong {
     color: var(--Very-Dark-Magenta);
 }
 
+main > .feedbacks {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
 main > .feedbacks > li {
     background-color: var(--Very-Dark-Magenta);
     padding: 2rem;
+    border-radius: 1rem;
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
