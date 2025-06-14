@@ -14,8 +14,8 @@
     --Dark-Grayish-Red: hsl(0, 6%, 24%);
     
     /*Gradients*/
-    --Gradient1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-    --Gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+    --Gradient1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+    --Gradient2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
 
     /**************/
     /* Typography */
@@ -54,7 +54,7 @@ body {
 }
 
 .page {
-    width: 320px;
+    width: 340px;
     display: flex;
     flex-flow: column nowrap;
     gap: 3rem;
@@ -103,15 +103,51 @@ main > form > .input > input#idEmail {
     padding: 1rem;
     border-radius: 30px;
     width: 100%;
+    border: 1px solid var(--Desaturated-Red);
 }
 
-main > form > .input > input[type = 'submit'] {
+main > form > .input > input#idEmail::placeholder {
+    color: var(--Desaturated-Red);
+}
+
+main > form > .input > input#idEmail:focus {
+    outline-color: var(--Soft-Red);
+}
+
+main > form > .input > img {
+    display: none;
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+main > form > .input > button {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 70px;
     border-radius: 30px;
-    background-color: var(--Desaturated-Red);
+    background-image: linear-gradient(var(--Gradient2));
     border: none;
+    color: white;
+    transition: all 250ms ease;
+}
+
+main > form > .input > button:active {
+    height: calc(100% + 5px);
+    width: 75px;
+    border-radius: 35px;
+    top: -2px;
+    right: -2px;
+    box-shadow: -2px 2px 15px var(--Desaturated-Red);
+}
+
+main > form > .input > p {
+    display: none;
+    position: absolute;
+    left: 1em;
+    top: 3.5rem;
+    color: var(--Desaturated-Red);
 }

@@ -31,12 +31,22 @@
       </p>
       <form method="get" autocomplete="on">
         <div class="input">
-          <input type="email" name="email" id="idEmail" placeholder="Email Address">
-          <input type="submit" value="icon">
+          <input type="email" name="email" id="idEmail" placeholder="Email Address" oninvalid="showError()">
+          <img id="icon-error" src="images/icon-error.svg" alt="Icon error">
+          <button type="submit"><img src="images/icon-arrow.svg" alt="Icon arrow"></button>
+          <p id="error-mensage">Please provide a valid email</p>
         </div>
       </form>
     </main>
   </div>
 
+  <script>
+    function showError(){
+      let msgError = document.querySelector('#error-mensage')
+      let iconError = document.querySelector('#icon-error')
+      msgError.style.display = 'block'
+      iconError.style.display = 'block'
+    }
+  </script>
 </body>
 </html>
