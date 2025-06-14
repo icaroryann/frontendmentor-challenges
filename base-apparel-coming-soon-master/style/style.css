@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /*Primary*/
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    
+    /*Neutral*/
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    
+    /*Gradients*/
+    --Gradient1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+    /**************/
+    /* Typography */
+    /**************/
+
+    /*Body Copy*/
+    --Body-Font-size: 16px;
+    
+    /*Font Family*/
+    --Font-Family: "Josefin Sans", sans-serif;
+    --Weights-300: 300;
+    --Weights-400: 400;
+    --Weights-600: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--Font-Family);
+}
+
+p {
+    font-size: var(--Body-Font-size);
+    line-height: 1.5em;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    width: 320px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+}
+
+header > .logo {
+    padding: 1.5rem;
+}
+
+header > .logo > img {
+    height: 1.2em;
+}
+
+header > picture > img {
+    width: 100%;
+}
+
+main {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+}
+
+main > h1 {
+    color: var(--Desaturated-Red);
+    font-weight: var(--Weights-300);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    letter-spacing: .2em;
+}
+
+main > h1 > strong {
+    color: var(--Dark-Grayish-Red);
+}
+
+main > p {
+    color: var(--Desaturated-Red);
+}
+
+main > form > .input {
+    position: relative;
+}
+
+main > form > .input > input#idEmail {
+    padding: 1rem;
+    border-radius: 30px;
+    width: 100%;
+}
+
+main > form > .input > input[type = 'submit'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 70px;
+    border-radius: 30px;
+    background-color: var(--Desaturated-Red);
+    border: none;
+}
