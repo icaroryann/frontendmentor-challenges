@@ -51,7 +51,6 @@ body {
 }
 
 .card {
-    position: relative;
     background-color: var(--Blue-900-card-BG);
     max-width: 350px;
     margin: 3rem auto;
@@ -61,6 +60,31 @@ body {
     padding: 1.5rem;
     border-radius: 1rem;
     color: var(--White);
+}
+
+.card > .banner {
+    position: relative;
+    cursor: pointer;
+}
+
+.card > .banner:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cyan-400);
+    border-radius: 1rem;
+    opacity: 0.5;
+}
+
+.card > .banner:hover::after {
+    content: url('../images/icon-view.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .card > .banner > img {
@@ -75,6 +99,7 @@ body {
 }
 
 .card > .content > h1 {
+    width: fit-content;
     font-size: 1.4rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -83,27 +108,6 @@ body {
 .card > .content > h1:hover {
     color: var(--Cyan-400);
     cursor: pointer;
-}
-
-.card > .content > h1:hover::before {
-    content: '';;
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    width: calc(100% - 3rem);
-    height: 302px;
-    border-radius: 1rem;
-    background-color: hsla(178, 100%, 50%, 0.363);
-}
-
-.card > .content > h1:hover::after {
-    content: url(../images/icon-view.svg);
-    position: absolute;
-    top: calc(302px/2);
-    left: calc(302px/2);
-    width: calc(100% - 3rem);
-    height: 302px;
-    opacity: 0.5;
 }
 
 .card > .content > p {
@@ -151,7 +155,13 @@ body {
     color: var(--Blue-500);
 }
 
-.card > .content > .creator > span > strong {
+.card > .content > .creator > span > a {
+    text-decoration: none;
     color: var(--White);
     font-weight: var(--Weight-300);
+}
+
+.card > .content > .creator > span > a:hover {
+    color: var(--Cyan-400);
+    transition: all 0.3s ease-in-out;
 }
