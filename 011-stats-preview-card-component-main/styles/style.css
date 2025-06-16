@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /* Primary */
+    --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+
+    /* Neutral */
+    --White-main-heading-stats: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --Font-size: 15px;
+    --Font-Family-Inter: "Inter", sans-serif;
+    --Weight-Inter-400: 400;
+    --Weight-Inter-700: 700;
+
+    --Font-Family-Lexend: "Lexend Deca", sans-serif;
+    --Weight-Lexend-400: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: var(--Font-Family-Lexend);
+    background-color: var(--Very-dark-blue-main-background);
+}
+
+h1 {
+    font-family: var(--Font-Family-Inter);
+}
+
+.card {
+    max-width: 320px;
+    background-color: var(--Dark-desaturated-blue-card-background);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner {
+    background-color: red;
+}
+
+/*.banner > img {
+    width: 100%;
+    height: 100%;
+}*/
