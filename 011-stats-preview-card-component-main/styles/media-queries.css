@@ -1,0 +1,31 @@
+.card {
+    max-width: fit-content;
+    display: grid;
+    gap: 5rem;
+    grid-template: 400px / 450px auto;
+}
+
+.banner {
+    grid-column: 2;
+    height: 100%;
+}
+
+.banner > img {
+    width: auto;
+    height: 100%;
+}
+
+.content {
+    padding: 3rem;
+    text-align: left;
+    grid-row: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.content > .table {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
