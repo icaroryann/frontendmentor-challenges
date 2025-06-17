@@ -6,3 +6,7 @@ p {
     max-width: 1000px;
     display: flex;
 }
+
+.card > article > button {
+    margin-top: 4rem    ;
+}
