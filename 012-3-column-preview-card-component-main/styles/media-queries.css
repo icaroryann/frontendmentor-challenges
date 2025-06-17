@@ -1,9 +1,9 @@
-p {
+/*p {
     width: clamp(20ch, 50%, 75ch);
-}
+}*/
 
 .card {
-    max-width: 1000px;
+    max-width: 650px;
     display: flex;
 }
 
