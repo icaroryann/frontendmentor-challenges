@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /* Primary */
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    
+    /* Neutral */
+    --Dark-gray: hsl(0, 0%, 59%);
+    
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --Font-size /*(name and stats)*/: 18px;
+    --Font-Family-Kumbh: "Kumbh Sans", sans-serif;
+    --Weight-400: 400;
+    --Weight-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Font-Family-Kumbh);
+    color: var(--Dark-grayish-blue);
+}
+
+strong {
+    color: var(--Very-dark-desaturated-blue);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-cyan);
+    background-image: url(../assets/images/bg-pattern-top.svg), url(../assets/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 40vh, left 50vw top 40vh
+}
+
+.card {
+    background-color: white;
+    min-width: 350px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+header {
+    background-image: url(../assets/images/bg-pattern-card.svg);
+    position: relative;
+    height: 140px;
+}
+
+header > img {
+    border: .3rem solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+section > p {
+    font-size: .8em;
+}
+
+section > p:nth-child(1) {
+    font-size: var(--Font-size);
+}
+
+section > p:nth-child(2) {
+    margin-top: .5rem;
+}
+
+hr {
+    border-color: var(--Dark-gray);
+    opacity: .1;
+    margin: 2rem 5px;
+}
+
+table {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+table th, td {
+    width: 120px;
+}
+
+table tr > td {
+    font-weight: var(--Weight-700);
+    color: var(--Very-dark-desaturated-blue);
+}
+
+table tr > th {
+    font-weight: var(--Weight-400);
+    font-size: .8em;
+}
