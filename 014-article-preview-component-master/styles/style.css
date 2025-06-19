@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --Font-size: 13px; /*Headings*/
+    --Font-Family: "Manrope", sans-serif;
+    --Weights-500: 500;
+    --Weights-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    max-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--Font-Family);
+    font-size: var(--Font-size);
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+p {
+    color: var(--Desaturated-Dark-Blue);
+}
+
+article {
+    max-width: 350px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+}
+
+header > img {
+    width: 100%;
+}
+
+.content {
+    margin: 2rem;
+}
+
+.content > p {
+    margin-top: 1rem;
+}
+
+footer {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer.activate {
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+footer.activate > .social-medias {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+footer.activate > .social-medias > p {
+    color: var(--Grayish-Blue);
+    letter-spacing: .3em;
+}
+
+footer > .data {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+footer > .data > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+footer > .data > .name-birth > .name {
+    font-weight: var(--Weights-700);
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+footer > .data > .name-birth > .date-birth {
+    color: var(--Grayish-Blue);
+}
+
+footer > .social-medias {
+    display: none;
+}
+
+footer > button {
+    border-width: 0;
+    padding: .4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+footer.activate > button {
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+footer > button > i {
+    color: var(--Desaturated-Dark-Blue);
+}
+
+footer.activate > button > i {
+    color: var(--Light-Grayish-Blue);
+}

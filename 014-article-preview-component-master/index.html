@@ -5,32 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles/style.css">
   
   <title>Frontend Mentor | Article preview component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+  <article>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+    <header>
+      <img src="images/drawers.jpg" alt="Drawers">
+    </header>
 
-  Michelle Appleton
-  28 Jun 2020
+    <div class="content">
+      <h1>
+        Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home
+      </h1>
+    
+      <p>
+        Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I’ve got some simple tips
+        to help you make any room feel complete.
+      </p>
+    </div>
+    
+    <footer id="share">
+      <div class="data">
+        <img src="images/avatar-michelle.jpg" alt="Michelle's avatar">
 
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      
+        <div class="name-birth">
+          <p class="name">Michelle Appleton</p>
+          <p class="date-birth">28 Jun 2020</p>
+        </div>
+      </div>
+
+      <div class="social-medias">
+        <p>SHARE</p>
+        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook's icon"></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter's icon"></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest's icon"></a>
+      </div>
+
+      <button id="toggle-social-medias"><i class="fa-solid fa-share"></i></button>
+    </footer>
+  </article>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
