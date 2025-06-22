@@ -17,8 +17,7 @@ button.addEventListener('click', function() {
         ? data.style.display = 'flex'
         : data.style.display = 'none'
     } else {
-        /*ballon.style.display = 'flex'*/
-
+        changeColorButton()
         ballon.style.display === 'flex'
         ? ballon.style.display = 'none'
         : ballon.style.display = 'flex'
@@ -26,9 +25,21 @@ button.addEventListener('click', function() {
 })
 
 window.addEventListener('resize', () => {
+    button.style.background = 'var(--Light-Grayish-Blue'
+    button.firstChild.style.color = 'var(--Desaturated-Dark-Blue)'
     data.style.display = 'flex'
     footer.classList.contains('activate')
     ? footer.classList.toggle('activate')
     : console.log('ok')
     ballon.style.display = 'none'
 })
+
+function changeColorButton() {
+    button.style.background == 'var(--Desaturated-Dark-Blue)'
+    ? button.style.background = 'var(--Light-Grayish-Blue'
+    : button.style.background = 'var(--Desaturated-Dark-Blue)'
+    
+    button.firstChild.style.color == 'var(--Light-Grayish-Blue)'
+    ? button.firstChild.style.color = 'var(--Desaturated-Dark-Blue)'
+    : button.firstChild.style.color = 'var(--Light-Grayish-Blue)'
+}
