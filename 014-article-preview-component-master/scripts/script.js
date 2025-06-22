@@ -5,12 +5,30 @@ let vh = window.innerHeight * 0.01
 document.documentElement.style.setProperty('--vh', `${vh}px`)
 
 const button = document.querySelector('#toggle-social-medias')
-button.addEventListener('click', function() {
-    const footer = document.querySelector('#share')
-    const data = document.querySelector('.data')
+const footer = document.querySelector('#share')
+const data = document.querySelector('.data')
+const ballon = document.querySelector('.floating-social-medias')
 
-    footer.classList.toggle('activate');
-    data.style.display == 'none'
-    ? data.style.display = 'flex'
-    : data.style.display = 'none'
+button.addEventListener('click', function() {
+    if (window.innerWidth <= 768) {
+        footer.classList.toggle('activate');
+    
+        data.style.display == 'none'
+        ? data.style.display = 'flex'
+        : data.style.display = 'none'
+    } else {
+        /*ballon.style.display = 'flex'*/
+
+        ballon.style.display === 'flex'
+        ? ballon.style.display = 'none'
+        : ballon.style.display = 'flex'
+    }
+})
+
+window.addEventListener('resize', () => {
+    data.style.display = 'flex'
+    footer.classList.contains('activate')
+    ? footer.classList.toggle('activate')
+    : console.log('ok')
+    ballon.style.display = 'none'
 })

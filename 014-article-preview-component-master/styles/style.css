@@ -139,3 +139,7 @@ footer > button > i {
 footer.activate > button > i {
     color: var(--Light-Grayish-Blue);
 }
+
+.floating-social-medias {
+    display: none;
+}
