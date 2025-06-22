@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /* Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+    
+    /* Neutral */
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --Font-size: 16px;
+    
+    /* Font */
+    --Font-Family: "Poppins", sans-serif;
+    --Weight-400: 400;
+    --Weight-500: 500;
+    --Weight-600: 600;
+    --Weight-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Font-Family);
+    font-size: var(--Font-size);
+    font-weight: var(--Weight-400);
+    max-width: 100vw;
+    min-height: 100vh;
+    background-image: url(../images/bg-intro-mobile.png);
+    background-color: var(--Red);
+    background-size: cover;
+}
+
+header {
+    color: white;
+    text-align: center;
+    width: Min(36ch, 31ch);
+    margin: 3rem auto 2rem auto;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.514);
+}
+
+.sign-up {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.sign-up > button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .7rem;
+    border-width: 0;
+    box-shadow: 0 .5rem .2rem rgba(0, 0, 0, 0.233);
+    background-color: var(--Blue);
+    color: white;
+    transition: all 100ms ease;
+}
+
+.sign-up > button:active {
+    box-shadow: none;
+    transform: scale(0.99);
+}
+
+.sign-up > button > p {
+    width: Max(23ch);
+    margin: 0 auto;
+    line-height: 1.5em;
+    box-shadow: 0 0 0;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.466);
+}
+
+.sign-up > form {
+    background-color: white;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .5rem .5rem 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+.sign-up > form > input {
+    padding: 1rem;
+    border-radius: .4rem;
+    border-width: 0;
+    border: 1px solid var(--Grayish-Blue);
+}
+
+.sign-up > form > input::placeholder{
+    color: var(--Dark-Blue);
+}
