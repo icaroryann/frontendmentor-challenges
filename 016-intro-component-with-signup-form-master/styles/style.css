@@ -59,7 +59,7 @@ header {
 
 .sign-up {
     max-width: 320px;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
 }
 
 .sign-up > button {
@@ -96,13 +96,99 @@ header {
     gap: 1rem;
 }
 
-.sign-up > form > input {
+.sign-up > form > .box-input {
+    position: relative;
+    animation: .2s linear 0s alternate error;
+    animation-iteration-count: 2;
+    animation-play-state: paused;
+}
+
+@keyframes error {
+    25% {
+        transform: translateX(.5rem);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-.5rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.sign-up > form > .box-input > input {
+    width: 100%;
     padding: 1rem;
     border-radius: .4rem;
     border-width: 0;
     border: 1px solid var(--Grayish-Blue);
 }
 
-.sign-up > form > input::placeholder{
+.sign-up > form > .box-input > input::placeholder{
     color: var(--Dark-Blue);
+    opacity: .5;
+}
+
+.sign-up > form > .box-input > img {
+    display: none;
+    width: 1em;
+    position: absolute;
+    top: calc(50% - 1em);
+    right: .5rem;
+}
+
+.sign-up > form > .box-input > p {
+    display: none;
+    text-align: right;
+    font-size: .6em;
+    color: var(--Red);
+    font-weight: var(--Weight-500);
+    font-style: italic;
+    margin-top: .3em;
+}
+
+.sign-up > form > .button {
+    background-color: var(--Green);
+    color: white;
+    border-width: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: .4rem;
+    box-shadow: 0 .2rem 0 hsl(154, 57%, 44%);
+    transition: all 100ms ease;
+}
+
+.sign-up > form > .button:hover {
+    opacity: .8;
+}
+
+.sign-up > form > .button:hover:active {
+    box-shadow: 0 0 0;
+    transform: scale(0.99);
+}
+
+.sign-up > .note {
+    background-color: white;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 0 0 .5rem .5rem;
+    text-align: center;
+    font-size: .7em;
+}
+
+.sign-up > .note > p {
+    width: Max(35ch);
+    margin: 0 auto;
+    color: var(--Grayish-Blue);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.171);
+}
+
+.sign-up > .note > p > a {
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: var(--Weight-600);
 }
