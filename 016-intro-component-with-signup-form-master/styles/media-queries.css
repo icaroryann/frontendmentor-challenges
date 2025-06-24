@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    align-items: center;
+    max-height: 100vh;
+    justify-content: center;
+}
+
+.sign-up {
+    margin-top: 2.5rem;
+}
