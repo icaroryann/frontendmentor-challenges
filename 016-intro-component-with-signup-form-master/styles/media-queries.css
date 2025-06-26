@@ -3,6 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    background-image: url(../images/bg-intro-desktop.png);
 }
 
 header {
