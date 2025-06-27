@@ -1,15 +1,15 @@
-// Armazena o formulário em uma variável
+// Store the form in a variable
 const submit = document.querySelector('#form-signup')
 
-// Define um modelo para os tipos de emails válidos
+// Define a pattern for valid email types
 let emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$/i;
 
-// Função que dispara quando o usuário tenta conluir o formulário
+// Function that triggers when the user tries to submit the form
 submit.addEventListener('submit', function(event) {
 
-    // Loop com comprimento dos inputs
+    // Loop through the length of the inputs
     for (let i=0; i<submit.length-1;i++) {
-        //
+        // If the input value is empty, change the box visual
         if (submit[i].value == '') {
             event.preventDefault()
             submit[i].style.borderColor = 'var(--Red)'
@@ -24,6 +24,8 @@ submit.addEventListener('submit', function(event) {
             placeHolder[i].removeAttribute('placeholder')
 
             submit[i].style.animation = '.2s linear 0s alternate error'
+
+        // If the email does not match the regex, print an alternative message
         }else if (submit[i].type == 'email' && !emailRegex.test(submit[i].value)) {
             event.preventDefault()
             submit[i].style.borderColor = 'var(--Red)'
