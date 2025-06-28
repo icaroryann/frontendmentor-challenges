@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+    
+    /* Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    
+    /* Neutral */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --Font-size: 16px;
+    
+    /* Font */
+    --Font-Family: "Karla", sans-serif;
+    --Weight-400: 400;
+    --Weight-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 90vh;
+    margin: 2rem;
+    font-family: var(--Font-Family);
+    font-size: var(--Font-size);
+    background-color: var(--Light-Gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 320px;
+    display: grid;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.card > * {
+    padding: 1.5rem;
+}
+
+.card > header {
+    background-color: white;
+}
+
+.card > header > h1 {
+    color: var(--Cyan);
+    font-size: 1.2rem;
+}
+
+.card > header > h2 {
+    color: var(--Bright-Yellow);
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.card > header > p {
+    color: var(--Grayish-Blue);
+    margin-top: 1rem;
+}
+
+.card > main {
+    background-color: var(--Cyan);
+    color: white;
+}
+
+.card > main > h2 {
+    font-size: 1rem;
+}
+
+.card > main > span {
+    display: block;
+    margin-top: 1rem;
+    color: hsla(203, 44%, 93%, 0.514);
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+
+.card > main > span > strong {
+    font-size: 1.5em;
+    color: white;
+}
+
+.card > main > p {
+    margin-top: 1rem;
+}
+
+.card > main > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--Bright-Yellow);
+    padding: .5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: .2rem;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.212);
+}
+
+.card > footer {
+    background-color: hsla(179, 62%, 43%, 0.808);
+    color: white;
+}
+
+.card > footer > h2 {
+    font-size: 1.2rem;
+}
+
+.card > footer > ul {
+    margin-top: 1rem;
+    list-style: none;
+    font-size: .9em;
+}
+
+.card > footer > ul > li {
+    margin-top: .15rem;
+    opacity: .7;
+}
