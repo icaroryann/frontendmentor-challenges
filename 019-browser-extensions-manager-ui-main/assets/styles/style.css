@@ -59,6 +59,7 @@ p {
 }
 
 header {
+    z-index: 1000;
     position: fixed;
     top: 1rem;
     left: 1rem;
@@ -81,6 +82,8 @@ header button {
 
 main {
     padding: .5rem;
+    max-width: 360px;
+    margin: 0 auto;
 }
 
 .filter h1 {
@@ -105,10 +108,76 @@ main {
     background-color: var(--Neutral-0);
     color: var(--Neutral-900);
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .filter-buttons button.active {
     background-color: var(--Red-700);
     color: var(--Neutral-100);
     border: transparent;
+}
+
+.extensions {
+    margin-top: 2rem;
+}
+
+.box-extension {
+    margin-top: 1rem;
+    background-color: var(--Neutral-0);
+    padding: 1rem;
+    border-radius: .6rem;
+    position: relative;
+    height: 12rem;
+}
+
+.box-extension img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.box-extension h2, p {
+    margin-left: 5rem;
+}
+
+.box-extension .remove {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    padding: .4rem 1rem;
+    border-radius: 2rem;
+    border-width: 0;
+    background-color: var(--Neutral-0);
+    border: 1px solid var(--Neutral-300);
+    cursor: pointer;
+}
+
+.box-extension .extension-toggle {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 1.5rem;
+    background-color: var(--Neutral-300);
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.box-extension .extension-toggle > .cicle {
+    background-color: var(--Neutral-0);
+    width: 1.3rem;
+    height: 1.3rem;
+    position: relative;
+    top: .1rem;
+    left: .1rem;
+    border-radius: .65rem;
+    transition: all .3s ease;
+}
+
+.box-extension .extension-toggle.active {
+    background-color: var(--Red-500);
+}
+
+.box-extension .extension-toggle.active > .cicle {
+    transform: translateX(1.5rem);
 }
