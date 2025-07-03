@@ -22,24 +22,26 @@
       <h1>Extensions List</h1>
       
       <div class="filter-buttons">
-        <button class="active" id="all">All</button>
-        <button id="active">Active</button>
-        <button id="inactive">Inactive</button>
+        <button class="active" id="all" onclick="getActivate()">All</button>
+        <button id="active" onclick="getActivate()">Active</button>
+        <button id="inactive" onclick="getActivate()">Inactive</button>
       </div>
     </section>
 
     <section class="extensions">
-      <div class="box-extension">
+      <!--<div class="box-extension">
         <img src="assets/images/logo-devlens.svg" alt="Logo of devlens extension">
         <h2>DevLens</h2>
         <p>Quickly inspect page layouts and visualize element boundaries.</p>
         Remove
         <button class="remove">Remove</button>
-        <div class="extension-toggle">
-          <div class="cicle">ciclo</div>
+        <div class="extension-toggle ">
+          <div class="cicle active"></div>
         </div>
-      </div>
+      </div>-->
     </section>
   </main>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
