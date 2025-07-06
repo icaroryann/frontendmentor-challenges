@@ -114,7 +114,7 @@ main {
 .filter-buttons button.active {
     background-color: var(--Red-700);
     color: var(--Neutral-100);
-    border: transparent;
+    border-color: var(--Red-700);
 }
 
 .extensions {
@@ -163,7 +163,7 @@ main {
     cursor: pointer;
 }
 
-.box-extension .extension-toggle > .cicle {
+.box-extension .extension-toggle > .circle {
     background-color: var(--Neutral-0);
     width: 1.3rem;
     height: 1.3rem;
@@ -178,6 +178,6 @@ main {
     background-color: var(--Red-500);
 }
 
-.box-extension .extension-toggle.active > .cicle {
+.box-extension .extension-toggle.active > .circle {
     transform: translateX(1.5rem);
 }
