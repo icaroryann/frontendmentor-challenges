@@ -1,72 +1,83 @@
-let extensions = []
-let extensionsActives = []
-let extensionsInactives = []
-const btnAll = document.querySelector('#all')
-const btnActive = document.querySelector('#active')
-const btnInactive = document.querySelector('#inactive')
+// Array to store all extensions
+let extensions = [];
+// Buttons for filtering
+const btnAll = document.querySelector('#all');
+const btnActive = document.querySelector('#active');
+const btnInactive = document.querySelector('#inactive');
+// Container for rendering extensions
+const extensionsContainer = document.querySelector('.extensions');
 
-const extensionsContainer = document.querySelector('.extensions')
-
+// Fetch extensions data from JSON file
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
-        extensions = data;
-        extensions.forEach((element, index) => {
-            element.id = index
-            element.isActive === true
-                ? extensionsActives.push(element)
-                : extensionsInactives.push(element)
-        })
-        showExtensions(extensions);
-    })
+        // Add an id to each extension for identification
+        extensions = data.map((ext, idx) => ({ ...ext, id: idx }));
+        showExtensions('all');
+    });
 
-function showExtensions(list) {
+// Returns filtered extensions based on type
+function getFilteredExtensions(type) {
+    if (type === 'active') return extensions.filter(e => e.isActive);
+    if (type === 'inactive') return extensions.filter(e => !e.isActive);
+    return extensions;
+}
+
+// Renders the extensions in the container
+function showExtensions(type) {
+    const list = getFilteredExtensions(type);
     extensionsContainer.innerHTML = '';
     list.forEach(element => {
         const extensionDiv = document.createElement('div');
-        extensionDiv.classList.add('box-extension')
-        const buttonActive = document.createElement('div')
-        buttonActive.classList.add('extension-toggle')
-        element.isActive === true
-            ? buttonActive.classList.add('active')
-            : buttonActive.classList.remove('active')
-        buttonActive.innerHTML = `<div class="circle"></div>`
-
+        extensionDiv.classList.add('box-extension');
+        // Card content
         extensionDiv.innerHTML = `
-            <img src=${element.logo} alt="Logo of ${element.name} extension">
+            <img src="${element.logo}" alt="Logo of ${element.name} extension">
             <h2>${element.name}</h2>
             <p>${element.description}</p>
             <button class="remove">Remove</button>
-            `;
-        extensionDiv.appendChild(buttonActive)
+        `;
+        // Toggle button for active/inactive
+        const buttonActive = document.createElement('div');
+        buttonActive.className = 'extension-toggle' + (element.isActive ? ' active' : '');
+        buttonActive.innerHTML = '<div class="circle"></div>';
+        buttonActive.addEventListener('click', function() {
+            this.classList.toggle('active');
+            element.isActive = this.classList.contains('active');
+        });
+        extensionDiv.appendChild(buttonActive);
+        // Remove button event
+        extensionDiv.querySelector('.remove').addEventListener('click', function() {
+            removeExtension(element.id);
+        });
         extensionsContainer.appendChild(extensionDiv);
     });
-    
-    document.querySelectorAll('.extension-toggle').forEach((toggle, index) => {
-        toggle.addEventListener('click', function() {
-            this.classList.toggle('active')
-            //this.classList.contains('active') ? extensionsActives.pop()
-        })
-    })
 }
 
-const listAllExt = document.querySelector('#all').addEventListener('click', () => {
-    btnActive.classList.remove('active')
-    btnInactive.classList.remove('active')
-    btnAll.classList.add('active')
-    showExtensions(extensions)
-})
+// Removes an extension by id and updates the view
+function removeExtension(id) {
+    extensions = extensions.filter(ext => ext.id !== id);
+    showExtensions(document.querySelector('.filters .active')?.id || 'all');
+}
 
-const listActiveExt = document.querySelector('#active').addEventListener('click', () => {   
-    btnAll.classList.remove('active')
-    btnInactive.classList.remove('active')
-    btnActive.classList.add('active')
-    showExtensions(extensionsActives)
+// Event listeners for filter buttons
+btnAll.addEventListener('click', () => {
+    btnActive.classList.remove('active');
+    btnInactive.classList.remove('active');
+    btnAll.classList.add('active');
+    showExtensions('all');
 });
 
-const listInactiveExt = document.querySelector('#inactive').addEventListener('click', () => {
-    btnAll.classList.remove('active')
-    btnActive.classList.remove('active')
-    btnInactive.classList.add('active')
-    showExtensions(extensionsInactives)
-})
+btnActive.addEventListener('click', () => {
+    btnAll.classList.remove('active');
+    btnInactive.classList.remove('active');
+    btnActive.classList.add('active');
+    showExtensions('active');
+});
+
+btnInactive.addEventListener('click', () => {
+    btnAll.classList.remove('active');
+    btnActive.classList.remove('active');
+    btnInactive.classList.add('active');
+    showExtensions('inactive');
+});
