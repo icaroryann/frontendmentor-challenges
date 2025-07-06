@@ -81,3 +81,14 @@ btnInactive.addEventListener('click', () => {
     btnInactive.classList.add('active');
     showExtensions('inactive');
 });
+
+document.querySelector('.mode').addEventListener('click', function() {
+    const imgMode = this.querySelector('img')
+    const logo = this.previousSibling()
+    document.body.classList.contains('dark-mode')
+    ?   console.log('off')
+    :   console.log('on')
+        imgMode.setAttribute('src', 'assets/images/icon-sun.svg')
+        this.style.background = 'var(--Neutral-600)'
+    document.body.classList.toggle('dark-mode')
+})

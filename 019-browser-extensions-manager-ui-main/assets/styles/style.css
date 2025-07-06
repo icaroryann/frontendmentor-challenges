@@ -54,6 +54,10 @@ body {
     background-image: var(--Light-Gradient);
 }
 
+body.dark-mode {
+    background-image: var(--Dark-Gradient);
+}
+
 p {
     font-size: var(--Font-size-paragraph);
 }
@@ -71,6 +75,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.dark-mode header {
+    background-color: var(--Neutral-700);
+    border-color: transparent;
 }
 
 header button {
@@ -93,6 +102,10 @@ main {
     color: var(--Neutral-900);
 }
 
+.dark-mode .filter h1 {
+    color: var(--Neutral-100);
+}
+
 .filter-buttons {
     margin-top: 1rem;
     display: flex;
@@ -111,10 +124,22 @@ main {
     cursor: pointer;
 }
 
+.dark-mode .filter-buttons button {
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-100);
+    border-color: var(--Neutral-600);
+}
+
 .filter-buttons button.active {
     background-color: var(--Red-700);
     color: var(--Neutral-100);
     border-color: var(--Red-700);
+}
+
+.dark-mode .filter-buttons button.active {
+    background-color: var(--Red-400);
+    border-color: transparent;
+    color: var(--Neutral-900);
 }
 
 .extensions {
@@ -128,6 +153,11 @@ main {
     border-radius: .6rem;
     position: relative;
     height: 12rem;
+}
+
+.dark-mode .box-extension {
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-100);
 }
 
 .box-extension img {
@@ -152,6 +182,11 @@ main {
     cursor: pointer;
 }
 
+.dark-mode .box-extension .remove {
+    background-color: transparent;
+    color: var(--Neutral-100);
+}
+
 .box-extension .extension-toggle {
     position: absolute;
     bottom: 1rem;
@@ -161,6 +196,10 @@ main {
     background-color: var(--Neutral-300);
     border-radius: 1.5rem;
     cursor: pointer;
+}
+
+.dark-mode .box-extension .extension-toggle {
+    background-color: var(--Neutral-600);
 }
 
 .box-extension .extension-toggle > .circle {
@@ -176,6 +215,10 @@ main {
 
 .box-extension .extension-toggle.active {
     background-color: var(--Red-500);
+}
+
+.dark-mode .box-extension .extension-toggle.active {
+    background-color: var(--Red-400);
 }
 
 .box-extension .extension-toggle.active > .circle {
