@@ -79,7 +79,7 @@ header {
 
 .dark-mode header {
     background-color: var(--Neutral-700);
-    border-color: transparent;
+    border-color: var(--Neutral-900);
 }
 
 header button {

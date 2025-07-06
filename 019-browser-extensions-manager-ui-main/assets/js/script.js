@@ -84,11 +84,15 @@ btnInactive.addEventListener('click', () => {
 
 document.querySelector('.mode').addEventListener('click', function() {
     const imgMode = this.querySelector('img')
-    const logo = this.previousSibling()
-    document.body.classList.contains('dark-mode')
-    ?   console.log('off')
-    :   console.log('on')
+    const logo = document.querySelector('#logo')
+    if(document.body.classList.contains('dark-mode')){
+        imgMode.setAttribute('src', 'assets/images/icon-moon.svg')
+        this.style.background = 'var(--Neutral-100)'
+        logo.setAttribute('src', 'assets/images/logo.svg')
+    } else {
         imgMode.setAttribute('src', 'assets/images/icon-sun.svg')
         this.style.background = 'var(--Neutral-600)'
+        logo.setAttribute('src', 'assets/images/logo-dark-mode.svg')
+    }
     document.body.classList.toggle('dark-mode')
 })
