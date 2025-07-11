@@ -5,30 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles/output.css">
   
   <title>Frontend Mentor | Blog preview card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="bg-bg max-w-full min-h-screen flex items-center justify-center">
+  <div class="card bg-card card min-w-320px max-w-90 p-4 rounded-2xl border-1 shadow-[5px_5px]">
+    <main>
+      <img class="rounded-2xl" src="assets/images/illustration-article.svg" alt="">
 
-  Learning
+      <div class="status bg-bg inline-block px-4 py-1 mt-5 rounded-[5px]">
+        Learning
+      </div>
 
-  Published 21 Dec 2023
+      <p class="time-publise mt-2 text-xs">
+        Published <time datetime="2023-12-21">21 Dec 2023</time>
+      </p>
 
-  HTML & CSS foundations
+      <h1 class="font-extrabold text-xl mt-2 cursor-pointer hover:text-bg hover:text-shadow-xl transition-colors">
+        HTML & CSS foundations
+      </h1>
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+      <p class="text-p-500 mt-2">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="autor flex items-center gap-2 mt-3">
+        <img class="w-10" src="assets/images/image-avatar.webp" alt="">
+        <span class="autor-name font-extrabold">
+          Greg Hooper
+        </span>
+      </div>
+
+    </main>
   </div>
 </body>
 </html>
