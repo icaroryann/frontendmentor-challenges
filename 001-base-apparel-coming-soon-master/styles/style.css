@@ -38,7 +38,7 @@
 }
 
 html, body {
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     font-family: var(--Font-Family);
 }
@@ -97,6 +97,7 @@ main > p {
 
 main > form > .input {
     position: relative;
+    margin-bottom: 3rem;
 }
 
 main > form > .input > input#idEmail {

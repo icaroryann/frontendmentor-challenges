@@ -1,0 +1,28 @@
+body {
+    display: block;
+}
+
+.page {
+    flex-flow: row-reverse nowrap;
+    justify-content: end;
+    width: max-content;
+    max-width: 900px;
+    max-height: 100vh;
+    position: relative;
+}
+
+header > .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header > picture > img {
+    width: auto;
+    height: 100%;
+    display: block;
+}
+
+main {
+    flex-grow: 1;
+}

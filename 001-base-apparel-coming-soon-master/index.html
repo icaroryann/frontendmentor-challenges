@@ -6,7 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/media-queries.css" media="screen and (min-width: 990px)">
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
@@ -29,7 +30,7 @@
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <form method="get" autocomplete="on">
+      <form id="form" method="get" autocomplete="on" novalidate>
         <div class="input">
           <input type="email" name="email" id="idEmail" placeholder="Email Address" oninvalid="showError()">
           <img id="icon-error" src="images/icon-error.svg" alt="Icon error">
@@ -40,13 +41,6 @@
     </main>
   </div>
 
-  <script>
-    function showError(){
-      let msgError = document.querySelector('#error-mensage')
-      let iconError = document.querySelector('#icon-error')
-      msgError.style.display = 'block'
-      iconError.style.display = 'block'
-    }
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
