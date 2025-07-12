@@ -3,26 +3,28 @@ body {
 }
 
 .page {
-    flex-flow: row-reverse nowrap;
-    justify-content: end;
-    width: max-content;
-    max-width: 900px;
-    max-height: 100vh;
+    flex-flow: row-reverse;
+    align-items: center;
+    width: auto;
+    gap: 0;
     position: relative;
 }
 
-header > .logo {
+.logo {
     position: absolute;
-    top: 0;
+    top: 2rem;
     left: 0;
+    padding: 0 !important;
+    margin-left: var(--main-margin-left);
 }
 
-header > picture > img {
-    width: auto;
-    height: 100%;
+header img {
     display: block;
+    height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+    width: 450px;
+    margin: auto;
+    text-align: left;
 }
