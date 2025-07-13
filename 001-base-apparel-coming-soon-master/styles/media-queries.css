@@ -13,9 +13,8 @@ body {
 .logo {
     position: absolute;
     top: 2rem;
-    left: 0;
+    left: 2rem;
     padding: 0 !important;
-    margin-left: var(--main-margin-left);
 }
 
 header img {

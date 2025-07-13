@@ -15,14 +15,3 @@ function showError(input) {
     input.focus();
     errorImg.style.display = 'block';
 }
-
-function reportWindowSize() {
-    const main = document.querySelector('main');
-    const mainStyle = window.getComputedStyle(main);
-    const marginLeftMain = mainStyle.marginLeft;
-    document.documentElement.style.setProperty('--main-margin-left', marginLeftMain)
-}
-
-reportWindowSize()
-
-window.onresize = reportWindowSize;
