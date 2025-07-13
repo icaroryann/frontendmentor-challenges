@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://icaroryann.github.io/frontendmentor-challenges/social-proof-section-master/)
+- [Live Site URL](https://icaroryann.github.io/frontendmentor-challenges/008-social-proof-section-master/)
 
 ## My process
 

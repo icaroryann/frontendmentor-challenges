@@ -27,8 +27,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/icaroryann/frontendmentor-challenges/tree/main/product-preview-card-component-main)
-- [Live Site URL](https://icaroryann.github.io/frontendmentor-challenges/product-preview-card-component-main/)
+- [Live Site URL](https://icaroryann.github.io/frontendmentor-challenges/004-product-preview-card-component-main/)
 
 ## My process
 
