@@ -12,7 +12,7 @@ const inconsolata = Inconsolata({ subsets: ['latin']})
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inconsolata.className} text-white flex flex-col items-center`}>
+      <body className={`${inconsolata.className} text-white flex flex-col items-center bg-[var(--Neutral-900)]`}>
         <Header />
         {children}
       </body>
