@@ -36,7 +36,7 @@ export default function Home() {
       <input type="text" name="name" id="" className="border-2 border-[var(--Neutral-700)] bg-[var(--Neutral-900)] rounded-xl w-full p-2" />
     </form>
 
-
+    {/*Lá vamos nos*/}
 
     {/*Email Address
     example@email.com
