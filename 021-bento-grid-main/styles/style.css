@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+    --Purple-100: hsl(254, 88%, 90%);
+
+    --Purple-500: hsl(256, 67%, 59%);
+
+    --Yellow-bg: hsl(38, 44%, 96%);
+
+    --Yellow-100: hsl(31, 66%, 93%);
+
+    --Yellow-500: hsl(39, 100%, 71%);
+
+    --White: hsl(0, 0%, 100%);
+
+    --Black: hsl(0, 0%, 7%);
+
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --Font-size-paragraph: 18px;
+    
+    /* Font */
+    --Font-Family: "DM Sans", sans-serif;
+    --Weight-400: 400;
+    --Weight-500: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: var(--Font-Family);
+    font-size: var(--Font-size-paragraph);
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--Yellow-bg);
+}
+
+.grid {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    max-width: 360px;
+}
+
+.grid > * {
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.grid > div:nth-child(1) {
+    background-color: var(--Purple-500);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.grid > div:nth-child(1) > h2 {
+    font-weight: var(--Weight-500);
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.grid > div:nth-child(1) > h2 > strong {
+    color: var(--Yellow-500);
+}
+
+.grid > div:nth-child(1) > img {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.grid > div:nth-child(1) > p {
+    color: var(--Yellow-100);
+}
+
+.grid > div:nth-child(2) {
+    background-color: var(--White);
+}
+
+.grid > div:nth-child(2) > h2 {
+    line-height: 2rem;
+}
+
+.grid > div:nth-child(3) {
+    background-color: var(--Yellow-500);
+    padding-bottom: 0;
+}
+
+.grid > div:nth-child(3) > h2 {
+    margin-bottom: 1rem;
+}
+
+.grid > div:nth-child(4) {
+    background-color: var(--Purple-100);
+    text-align: center;
+}
+
+.grid > div:nth-child(4) > h2 {
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.grid > div:nth-child(4) > p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.grid > div:nth-child(5) {
+    background-color: var(--Purple-500);
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.grid > div:nth-child(5) > h2 {
+    font-size: 2.3rem;
+    line-height: 2rem;
+    font-weight: normal;
+    margin-top: 2rem;
+}
+
+.grid > div:nth-child(6) {
+    background-color: white;
+}
+
+.grid > div:nth-child(6) > h2 {
+    font-size: 2rem;
+}
+
+.grid > div:nth-child(6) > img {
+    width: 60%;
+    margin-top: 1rem;
+}
+
+.grid > div:nth-child(7) {
+    background-color: var(--Yellow-100);
+}
+
+.grid > div:nth-child(7) > h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.grid > div:nth-child(7) > h2 > strong {
+    color: var(--Purple-500);
+}
+
+.grid > div:nth-child(7) > img {
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.grid > div:nth-child(8) {
+    background-color: var(--Yellow-500);
+}
+
+.grid > div:nth-child(8) > h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.grid > div:nth-child(8) > img {
+    width: 75%;
+    margin-top: 1rem;
+}
