@@ -1,3 +1,5 @@
+import { Form } from "next/form";
+
 export default function Home() {
   return (<>
     {/*<!-- Form starts -->*/}
@@ -9,24 +11,34 @@ export default function Home() {
       Secure your spot at next year's biggest coding conference.
     </span>
 
-    <form action="" method="get" autoComplete="on" noValidate className="w-full p-6">
+    <form action="" method="get" autoComplete="on" noValidate className="w-full p-6 md:w-md">
       <label htmlFor="avatar">
         Upload Avatar
-      </label>
+        <input type="file" name="file" id="avatar" className="hidden" />
 
-      <div>
-        <div className="bg-gray-600 w-fit p-2 rounded-xl">
-          <img src="/icon-upload.svg" alt="" />
+        <div className="mt-2 h-30 border-2 border-dashed bg-[var(--Neutral-900)] rounded-2xl border-[var(--Neutral-500)] p-2 flex flex-col items-center justify-center gap-2">
+          <div className="bg-[var(--Neutral-700)]/50 w-fit p-2 rounded-xl border-2 border-[var(--Neutral-700)]">
+            <img src="/icon-upload.svg" alt="" />
+          </div>
+          <span className="text-[var(--Neutral-500)]">
+            Drag and drop or click to upload
+          </span>
         </div>
+      </label>
+      <div className="mt-2 flex items-center gap-2">
+        <img src="icon-info.svg" alt="" className="inline" />
+        <span className="text-[var(--Neutral-700)]">Upload your photo (JPG or PNG, max size: 500KB).</span>
       </div>
+      
+      <label htmlFor="name" className="mt-4 block">
+        Full Name
+      </label>
+      <input type="text" name="name" id="" className="border-2 border-[var(--Neutral-700)] bg-[var(--Neutral-900)] rounded-xl w-full p-2" />
     </form>
 
-    {/*Drag and drop or click to upload
-    Upload your photo (JPG or PNG, max size: 500KB).
 
-    Full Name
 
-    Email Address
+    {/*Email Address
     example@email.com
 
     GitHub Username
