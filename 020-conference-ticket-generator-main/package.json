@@ -1,0 +1,26 @@
+{
+  "name": "020-conference-ticket-generator-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "next": "^15.4.1",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.14",
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
