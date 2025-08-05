@@ -4,7 +4,7 @@ const dessertsDiv = document.querySelector('.desserts')
 let dessertsList = []
 let cartList = []
 
-fetch('/data.json')
+fetch('./data.json')
 .then(response => response.json())
 .then(data => {
     dessertsList = data
@@ -41,9 +41,9 @@ const showDesserts = (array) => {
     })
 }
 
-async function showAmount(numberChildren) {
-    const selectDiv =  await dessertsDiv.children[numberChildren]
-    selectDiv.querySelector('.image').focus()
-    selectDiv.querySelector('add').innerHTML = ''
-    selectDiv.querySelector('amount').classList.toggle('active')
-}
+// async function showAmount(numberChildren) {
+//     const selectDiv =  await dessertsDiv.children[numberChildren]
+//     selectDiv.querySelector('.image').focus()
+//     selectDiv.querySelector('add').innerHTML = ''
+//     selectDiv.querySelector('amount').classList.toggle('active')
+// }
