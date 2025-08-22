@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /* Primary */
+    --purple-700: hsl(257, 40%, 49%);
+    --magenta-400: hsl(300, 69%, 71%);
+    
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Headings */
+    --font-headings: "Poppins", sans-serif;
+    --font-head-weights-400: 400;
+    --font-head-weights-600: 600;
+    /* Body */
+    --font-body: "Open Sans", sans-serif;
+    --font-body-weights: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    background-color: var(--purple-700);
+    font-size: medium;
+    color: white;
+}
+
+h1 {
+    font-family: var(--font-headings);
+    font-weight: var(--font-head-weights-600);
+}
+
+p {
+    font-family: var(--font-body);
+    font-weight: var(--font-body-weights);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem;
+}
+
+.logo {
+    display: block;
+    width: 10rem;
+}
+
+.mockups {
+    display: block;
+    width: 100%;
+    margin-top: 4.5rem;
+}
+
+.content {
+    text-align: center;
+}
+
+.content > h1 {
+    margin-top: 4rem;
+}
+
+.content > p {
+    margin-top: 1rem;
+}
+
+.content > button {
+    width: 10rem;
+    padding: .5rem 0;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    transition: all 200ms ease;
+    color: var(--purple-700);
+}
+
+.content > button:hover {
+    background-color: var(--magenta-400);
+    color: white;
+}
+
+.content > button:active {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(.95);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+footer > .social-container {
+    border: 1px solid white;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+footer > .social-container:hover {
+    border-color: var(--magenta-400);
+    color: var(--magenta-400);
+}
+
+@media screen and (min-width:768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .content {
+        text-align: left;
+    }
+
+    .content > h1 {
+        margin-top: 0;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 1rem;
+        right: 4rem;
+    }
+}
