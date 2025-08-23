@@ -131,12 +131,18 @@ footer > .social-container:hover {
         display: flex;
         align-items: center;
         overflow: hidden;
+        background-image: url('../images/bg-desktop.svg');
     }
 
     main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.1fr 1fr;
         align-items: center;
         gap: 2rem;
+    }
+
+    .logo {
+        position: absolute;
+        top: 2rem;
     }
 
     .content {
@@ -151,5 +157,16 @@ footer > .social-container:hover {
         position: absolute;
         bottom: 1rem;
         right: 4rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 990px) {
+    body {
+        overflow: visible;
+        position: relative;
+    }
+    
+    h1 {
+        font-size: 1.3em;
     }
 }
