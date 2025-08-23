@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /* Primary */
+    --color-primary-Purple-500: hsl(259, 100%, 65%);
+    --color-primary-Red-400: hsl(0, 100%, 67%);
+    
+    /* Neutral */
+    --color-neutral-White: hsl(0, 100%, 100%);
+    --color-neutral-Grey-100: hsl(0, 0%, 94%);
+    --color-neutral-Grey-200: hsl(0, 0%, 86%);
+    --color-neutral-Grey-500: hsl(0, 1%, 44%);
+    --color-neutral-Black: hsl(0, 0%, 0%);
+    
+    /**************/
+    /* Typography */
+    /**************/
+
+    /* Body Copy */
+    --font-size-inputs: 32px;
+    
+    /* Font */
+    --font-poppins: "Poppins", sans-serif;
+    --font-Weights-400i: 400i;
+    --font-Weights-700: 700;
+    --font-Weights-800i: 800i;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    background-color: var(--color-neutral-Grey-100);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.calculator {
+    width: 320px;
+    background-color: var(--color-neutral-White);
+    border-radius: 1.5rem 1.5rem 5rem 1rem;
+    padding: 4rem 1rem;
+}
+
+.calculator > form > .inputs {
+    display: grid;
+    grid-template: 1.2em 3rem / repeat(3, 5.5rem);
+    justify-content: space-between;
+}
+
+form > .inputs > label {
+    font-size: .7em;
+    color: var(--color-neutral-Grey-500);
+}
+
+form > .inputs > input {
+    grid-row: 2;
+    border: 1px solid var(--color-neutral-Grey-200);
+    border-radius: .2rem;
+}
+
+form > .inputs > input::placeholder {
+    color: var(--color-neutral-Grey-500);
+    font-weight: var(--font-Weights-700);
+    padding-left: .5em;
+    font-size: 1.2em;
+}
+
+form .button {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+form hr {
+    border-color: var(--color-neutral-Grey-100);
+    border-style: solid;
+}
+
+form button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-primary-Purple-500);
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+}
+
+form button > img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
