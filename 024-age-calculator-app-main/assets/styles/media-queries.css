@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.calculator {
+    width: 500px;
+    padding: 2rem;
+}
+
+.calculator > form > .inputs {
+    justify-content: start;
+    grid-template: 1.2em 3rem / repeat(3, 7rem);
+}
+
+form > .inputs > input {
+    margin-right: 1rem;
+    padding-left: .7em;
+}
+
+form .button {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+form button {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: translate(0, -50%);
+}
+
+@keyframes activebtn {
+    0% {
+        background-color: var(--color-neutral-Black);
+        transform: translate(0, -50%) rotate(0);
+    }
+    100% {
+        transform: translate(0, -50%) rotate(720deg);
+    }
+}
+
+.time-passed {
+    font-size: 4rem;
+}

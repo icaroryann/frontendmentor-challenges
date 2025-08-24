@@ -11,22 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="assets/styles/media-queries.css" media="screen and (min-width:768px)">
   
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
 <body>
   <div class="calculator">
-    <form action="">
+    <form id="form" novalidate>
       <div class="inputs">
         <label for="day">DAY</label>
         <input type="number" name="day" id="day" placeholder="DD">
+        <span class="messageError one">error1</span>
   
         <label for="month">MONTH</label>
         <input type="number" name="month" id="month" placeholder="MM">
+        <span class="messageError two">error2</span>
   
         <label for="year">YEAR</label>
         <input type="number" name="year" id="year" placeholder="YYYY">
+        <span class="messageError tree">error3</span>
       </div>
 
       <div class="button">
@@ -40,10 +44,12 @@
     </form>
 
     <section class="time-passed">
-      <p><strong class="result-year">--</strong>years</p>
-      <p><strong class="result-month">--</strong>months</p>
-      <p><strong class="result-day">--</strong>days</p>
+      <p><strong class="result-year">- - </strong>years</p>
+      <p><strong class="result-month">- - </strong>months</p>
+      <p><strong class="result-day">- - </strong>days</p>
     </section>
   </div>
+
+  <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
