@@ -60,14 +60,19 @@ form.addEventListener('submit', function(event) {
         if (Number(year.value) > dateNow.getFullYear()) {
             isYearOk = false
             displayError(year, 'Must be in the past');
-        }  else {
+        // } else if (year.value.length < 4) {
+        //     isYearOk = false
+        //     displayError(year, 'Must be avalid year')
+        } else {
             isYearOk = true
         }
     }
 
     // If all fields are valid, calculate the difference
     if (isFormOk && isDayOk && isMonthOk && isYearOk) {
-        const dayBirth = new Date(`${year.value}/${month.value}/${day.value}`)
+    // Corrige anos < 100 usando setFullYear
+    const dayBirth = new Date(0, Number(month.value) - 1, Number(day.value));
+    dayBirth.setFullYear(Number(year.value));
         let age = dateNow.getFullYear() - dayBirth.getFullYear();
         let monthDiff = dateNow.getMonth() - dayBirth.getMonth();
         let dayDiff = dateNow.getDate() - dayBirth.getDate();
