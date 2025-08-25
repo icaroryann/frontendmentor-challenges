@@ -150,6 +150,26 @@ form button {
     }
 }
 
+form button.spin-accelerate {
+    animation: spinAccelerate 0.7s cubic-bezier(0.4,0,0.7,1.2) both;
+}
+
+@keyframes spinAccelerate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        animation-timing-function: cubic-bezier(0.4,0,0.7,1.2);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(1080deg);
+    }
+}
+
 form button:hover {
     background-color: var(--color-neutral-Black);
 }

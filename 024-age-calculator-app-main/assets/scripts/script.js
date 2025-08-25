@@ -86,9 +86,18 @@ form.addEventListener('submit', function(event) {
             monthDiff += 12;
         }
 
-        animateCountUp(resultYears, age, 700);
-        animateCountUp(resultMonths, monthDiff, 700);
-        animateCountUp(resultDays, dayDiff, 700);
+        // Botão gira acelerando durante a animação dos resultados
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.classList.add('spin-accelerate');
+            setTimeout(() => {
+                submitBtn.classList.remove('spin-accelerate');
+            }, 700);
+        }
+
+        animateCountUp(resultYears, age, 1400);
+        animateCountUp(resultMonths, monthDiff, 1400);
+        animateCountUp(resultDays, dayDiff, 1400);
     }
 })
 
