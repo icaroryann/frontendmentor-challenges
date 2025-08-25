@@ -4,40 +4,105 @@ form.addEventListener('submit', function(event) {
     const day = document.querySelector('#day')
     const month = document.querySelector('#month')
     const year = document.querySelector('#year')
-    const time = [day, month, year]
-    const errorDiv = document.querySelectorAll('.messageError')
-    const labelName = document.querySelectorAll('label')
     const resultYears = document.querySelector('.result-year')
     const resultMonths = document.querySelector('.result-month')
     const resultDays = document.querySelector('.result-day')
     const dateNow = new Date()
-    let isFormOk = false
+    let isFormOk = true
+    let isDayOk = false
+    let isMonthOk = false
+    let isYearOk = false
 
-    time.map((date, idx) => {
-        if (!date.value) {
-            displayError(date, 'This fild is required')
-            isFormOk = false
+    // Checks if the year is a leap year
+    const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    // Returns the max day for a given month and year
+    const getMaxDay = (month, year) => {
+        if ([4, 6, 9, 11].includes(month)) return 30;
+        if (month === 2) return isLeapYear(year) ? 29 : 28;
+        return 31;
+    };
+
+    // Day validation
+    if (!day.value) {
+        displayError(day, 'This field is required')
+        isFormOk = false
+    } else {
+        setInputOk(day, 0)
+        const maxDay = getMaxDay(Number(month.value), Number(year.value));
+        if (Number(day.value) < 1 || Number(day.value) > maxDay) {
+            isDayOk = false
+            displayError(day, `Must be a valid day (1-${maxDay})`);
         } else {
-            isFormOk = true
-            date.classList.remove('none')
-            errorDiv[idx].style.display = 'none'
-            labelName[idx].style.color = 'var(--color-neutral-Grey-500)'
+            isDayOk = true
+        }
+    }
+
+    // Month validation
+    if (!month.value) {
+        displayError(month, 'This field is required')
+        isFormOk = false
+    } else {
+        setInputOk(month, 1)
+        if (Number(month.value) > 12 || Number(month.value) < 1) {
+            isMonthOk = false
+            displayError(month, 'Must be a valid month');
+        }  else {
+            isMonthOk = true
+        }
+    }
+
+    // Year validation
+    if (!year.value) {
+        displayError(year, 'This field is required')
+        isFormOk = false
+    } else {
+        setInputOk(year, 2)
+        if (Number(year.value) > dateNow.getFullYear()) {
+            isYearOk = false
+            displayError(year, 'Must be in the past');
+        }  else if (Number(year.value) < 1909) {
+            isYearOk = false
+            displayError(year, "You're a Guinness Book record holder");
+        }  else {
+            isYearOk = true
+        }
+    }
+
+    // If all fields are valid, calculate the difference
+    if (isFormOk && isDayOk && isMonthOk && isYearOk) {
+        const dayBirth = new Date(`${year.value}/${month.value}/${day.value}`)
+        let age = dateNow.getFullYear() - dayBirth.getFullYear();
+        let monthDiff = dateNow.getMonth() - dayBirth.getMonth();
+        let dayDiff = dateNow.getDate() - dayBirth.getDate();
+
+        if (dayDiff < 0) {
+            monthDiff--;
+            // Adjust for the number of days in the previous month
+            const prevMonth = new Date(dateNow.getFullYear(), dateNow.getMonth(), 0);
+            dayDiff += prevMonth.getDate();
+        }
+        if (monthDiff < 0) {
+            age--;
+            monthDiff += 12;
         }
 
-        (parseInt(day.value) > 31 || parseInt(day.value) < 1) && displayError(day, 'Must be a valid day')
-        (parseInt(month.value) > 12 || parseInt(month.value) < 1) && displayError(month, 'Must be a valid month')
-        parseInt(year.value) > dateNow.getFullYear() && displayError(year, 'Must be in the past')
-        parseInt(year.value) < 1909 && displayError(year, "You're a Guinness Book record holder")
-    })
-
-    if (isFormOk) {
-        resultYears.innerHTML = dateNow.getFullYear - parseInt(year.value)
+        resultYears.innerHTML = age + "";
+        resultMonths.innerHTML = monthDiff + "";
+        resultDays.innerHTML = dayDiff + "";
     }
 })
 
+// Shows the error message for the input
 const displayError = (element, message) => {
-    element.classList.add('none')
     element.nextElementSibling.innerHTML = message
     element.nextElementSibling.style.display = 'block'
     element.previousElementSibling.style.color = 'var(--color-primary-Red-400)'
+}
+
+// Resets the input to the valid state
+const setInputOk = (date, idx) => {
+    const errorDiv = document.querySelectorAll('.messageError')
+    const labelName = document.querySelectorAll('label')
+    errorDiv[idx].style.display = 'none'
+    labelName[idx].style.color = 'var(--color-neutral-Grey-500)'
 }
