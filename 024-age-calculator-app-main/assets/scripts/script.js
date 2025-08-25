@@ -86,11 +86,31 @@ form.addEventListener('submit', function(event) {
             monthDiff += 12;
         }
 
-        resultYears.innerHTML = age + "";
-        resultMonths.innerHTML = monthDiff + "";
-        resultDays.innerHTML = dayDiff + "";
+        animateCountUp(resultYears, age, 700);
+        animateCountUp(resultMonths, monthDiff, 700);
+        animateCountUp(resultDays, dayDiff, 700);
     }
 })
+
+
+// Kassanikeo-style: animated count up/down to the final value
+function animateCountUp(element, finalValue, duration = 700) {
+    const startValue = parseInt(element.textContent) || 0;
+    const startTime = performance.now();
+    const isInt = Number.isInteger(finalValue);
+    function animate(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.round(startValue + (finalValue - startValue) * progress);
+        element.textContent = isInt ? current : current.toFixed(0);
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            element.textContent = finalValue;
+        }
+    }
+    requestAnimationFrame(animate);
+}
 
 // Shows the error message for the input
 const displayError = (element, message) => {
