@@ -60,9 +60,6 @@ form.addEventListener('submit', function(event) {
         if (Number(year.value) > dateNow.getFullYear()) {
             isYearOk = false
             displayError(year, 'Must be in the past');
-        }  else if (Number(year.value) < 1909) {
-            isYearOk = false
-            displayError(year, "You're a Guinness Book record holder");
         }  else {
             isYearOk = true
         }
