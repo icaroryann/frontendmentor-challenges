@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+:root {
+    /**********/
+    /* Colors */
+    /**********/
+
+    /* Primary */
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    
+    /* Neutral */
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%) ;
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    /**************/
+    /* Typography */
+    /**************/
+    
+    /* Body Copy */
+    --Font-size: 15px;
+    
+    /* Font */
+    --Font-Inter: "Inter", sans-serif;
+    --Weights-400: 400;
+    --Weights-700: 700;
+    --Weights-800: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* max-width: 100vw; */
+    margin: 0 auto;
+    max-width: 360px;
+    min-height: 100vh;
+    font-family: var(--Font-Inter);
+    font-weight: var(--Weights-400);
+    padding: 0 1rem;
+}
+
+p {
+    font-size: var(--Font-size);
+    line-height: 1.5em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+header > .logo {
+    width: 2.5em;
+}
+
+header > .logo > img {
+    width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main img {
+    display: block;
+    width: 100%;
+}
+
+main > h1 {
+    margin-top: 1rem;
+    font-weight: var(--Weights-800);
+    font-size: 2.2em;
+}
+
+main > p {
+    margin-top: 1rem;
+    color: var(--Dark-grayish-blue);
+}
+
+main > p > a {
+    display: block;
+    margin-top: 1.5rem;
+    background-color: var(--Soft-red);
+    color: black;
+    text-decoration: none;
+    width: max-content;
+    padding: .7em 2.2em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: var(--Weights-700);
+}
+
+main > p > a:hover {
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+}
+
+aside {
+    margin-top: 3.5rem;
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    padding: 1rem;
+}
+
+aside > h2 {
+    color: var(--Soft-orange);
+    font-size: 2em;
+}
+
+aside > section {
+    margin-top: 2rem;
+}
+
+aside > section > p {
+    margin-top: .5em;
+    color: var(--Grayish-blue);
+}
