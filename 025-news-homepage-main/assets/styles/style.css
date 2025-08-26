@@ -65,6 +65,41 @@ header > .logo > img {
     width: 100%;
 }
 
+header > nav {
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    background-color: var(--Off-white);
+    padding: 30% 0 0 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header > nav.visible {
+    display: flex;
+}
+
+header > nav > img {
+    width: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+header > nav > a {
+    text-decoration: none;
+    color: black;
+}
+
+header > .menu {
+    cursor: pointer;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -120,7 +155,53 @@ aside > section {
     margin-top: 2rem;
 }
 
+aside > section:not(:last-child) {
+    border-bottom: 1px solid var(--Grayish-blue);
+    padding-bottom: 2rem;
+}
+
 aside > section > p {
     margin-top: .5em;
     color: var(--Grayish-blue);
+}
+
+footer {
+    margin-top: 3rem;
+}
+
+footer > section {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+footer > section:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+/* footer > section > .image-section-footer {
+    display: inline-block;
+    width: 100px;
+} */
+
+footer > section > .image-section-footer > img {
+    width: 100%;
+}
+
+footer > section > article > h2 {
+    color: var(--Soft-red);
+}
+
+footer > section > article > h3 {
+    margin: .7rem 0;
+    font-size: 1em;
+}
+
+footer > section > article > p {
+    color: var(--Dark-grayish-blue);
+}
+
+footer > section:last-child {
+    margin-bottom: 5rem;
 }
