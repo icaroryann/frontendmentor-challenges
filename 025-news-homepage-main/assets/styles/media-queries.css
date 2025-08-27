@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url('./style-guide.css');
+
+body {
+    max-width: 990px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+header {
+    grid-column: 1 / span 2;
+    padding: 0;
+    padding-top: 1.2rem;
+}
+
+header > nav {
+    z-index: 0;
+    position: initial;
+    width: fit-content;
+    background-color: initial;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+header > nav > img {
+    display: none;
+}
+
+header > nav > a {
+    transition: color .2s ease;
+}
+
+header > nav > a:hover {
+    color: var(--Soft-red);
+}
+
+header > .menu {
+    display: none;
+}
+
+main {
+    /* grid-column: 1 / span 2; */
+    grid-template-columns: minmax(8ch, 1fr) 1fr;
+    gap: 1rem;
+}
+
+main picture {
+    grid-column: 1 / span 2;
+}
+
+main > h1 {
+    margin-top: 0;
+    font-size: 3.5em;
+    line-height: 1em;
+}
+
+main > p {
+    margin-top: 0;
+}
+
+aside {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside > section {
+    margin-top: 0;
+}
+
+aside > section:not(:last-child) {
+    padding-bottom: 1.5rem;
+}
+
+aside > section > h3 {
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+aside > section > h3:hover {
+    color: var(--Soft-orange);
+}
+
+footer {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    grid-column: 1 / span 2;
+    justify-content: space-between;
+}
+
+footer > section {
+    flex-basis: 300px;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+footer > section:not(:first-child) {
+    margin-top: 0;
+}
+
+footer > section:last-child {
+    margin-bottom: 0;
+}
+
+footer > section > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer > section > article > h3 {
+    margin: .2rem 0;
+    font-size: 1em;
+    transition: color .2s ease;
+    cursor: pointer;
+}
+
+footer > section > article > h3:hover {
+    color: var(--Soft-red);
+}
