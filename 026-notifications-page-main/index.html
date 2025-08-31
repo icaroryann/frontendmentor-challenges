@@ -5,47 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles/style.css">
   
   <title>Frontend Mentor | Notifications page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class="notifications-container">
+    <header>
+      <h1>
+        Notifications <strong>0</strong>
+      </h1>
 
-  Notifications 3
+      <button id="toggleAllReadBtn">
+        Mark all as read
+      </button>
+    </header>
 
-  Mark all as read
+    <main>
+      <div class="notification-card not-read">
+        <div class="image">
+          <img src="assets/images/avatar-mark-webber.webp" alt="Avatar of Mark Webber">
+        </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+        <div class="content">
+          <p>
+            <strong>Mark Webber</strong> reacted to your recent post <strong>My first tournament today!</strong>
+          </p>
+          <time datetime="2025-08-30 16:15">1m ago</time>
+        </div>
+      </div>
 
-  Angela Gray followed you
-  5m ago
+      <div class="notification-card not-read">
+        <div class="image">
+          <img src="assets/images/avatar-angela-gray.webp" alt="Avatar of Angela Gray">
+        </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+        <div class="content">
+          <p>
+            <strong>Angela Gray</strong> followed you
+          </p>
+          <time datetime="2025-08-30 16:19">5m ago</time>
+        </div>
+      </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+      <div class="notification-card not-read group-status">
+        <div class="image">
+          <img src="assets/images/avatar-jacob-thompson.webp" alt="Avatar of Jacob Thompson">
+        </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+        <div class="content">
+          <p>
+            <strong>Jacob Thompson</strong> has joined your group <strong>Chess Club</strong>
+          </p>
+          <time datetime="2025-08-30 16:20">1 day ago</time>
+        </div>
+      </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+      <div class="notification-card message">
+        <div class="image">
+          <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Avatar of Rizky Hasanuddin">
+        </div>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="content">
+          <p>
+            <strong>Rizky Hasanuddin</strong> sent you a private message
+          </p>
+          <time datetime="2025-08-30 16:22">5 days ago</time>
+          <div class="message">
+            <p>
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+              I'm already having lots of fun and improving my game.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="notification-card comment-in-pic">
+        <div class="image">
+          <img src="assets/images/avatar-kimberly-smith.webp" alt="Avatar of Kimberly Smith">
+        </div>
+
+        <div class="content">
+          <p>
+            <strong>Kimberly Smith</strong> commented on your picture
+          </p>
+          <time datetime="2025-08-30 16:25">1 week ago</time>
+        </div>
+
+        <div class="picture">
+          <img src="assets/images/image-chess.webp" alt="A girl playing chess">
+        </div>
+      </div>
+
+      <div class="notification-card">
+        <div class="image">
+          <img src="assets/images/avatar-nathan-peterson.webp" alt="Avatar of Nathan Peterson">
+        </div>
+
+        <div class="content">
+          <p>
+            <strong>Nathan Peterson</strong> reacted to your recent post <strong>5 end-game strategies to increase your win rate</strong>
+          </p>
+          <time datetime="2025-08-30 16:27">2 weeks ago</time>
+        </div>
+      </div>
+
+      <div class="notification-card group-status">
+        <div class="image">
+          <img src="assets/images/avatar-anna-kim.webp" alt="Avatar of Anna Kim">
+        </div>
+
+        <div class="content">
+          <p>
+            <strong>Anna Kim</strong> left the group <strong>Chess Club</strong>
+          </p>
+          <time datetime="2025-08-30 16:28">2 weeks ago</time>
+        </div>
+      </div>
+    </main>
   </div>
+
+  <script src="assets/js/javascript.js"></script>
 </body>
 </html>
