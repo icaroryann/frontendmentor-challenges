@@ -20,7 +20,7 @@ function Image({mobileSrc, tabletSrc, desktopSrc, alt}:iImage) {
         />
         <img
         className="
-            w-full
+            w-full lg:h-[440px]
         "
         src={mobileSrc} alt={alt}
         />
