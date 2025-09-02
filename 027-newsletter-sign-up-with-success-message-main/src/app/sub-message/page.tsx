@@ -11,7 +11,7 @@ function Sub() {
   return (
     email 
     ?
-      <Suspense fallback={<div>Carregando...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <div className='min-h-screen grid place-items-center p-6 md:bg-white md:min-h-auto md:w-md md:p-10 md:rounded-4xl'>
           <div>
             <img src="/assets/images/icon-success.svg" alt="Success icon" />
@@ -30,9 +30,11 @@ function Sub() {
         </div>
       </Suspense>
     :
-      <div>
-        <h1>You should not be here without a email :)</h1>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div>
+          <h1>You should not be here without a email :)</h1>
+        </div>
+      </Suspense>
   )
 }
 
