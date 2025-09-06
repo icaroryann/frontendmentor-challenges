@@ -1,1 +1,24 @@
+@charset "UTF-8";
 @import "tailwindcss";
+
+@theme {
+  /**********/
+  /* Colors */
+  /**********/
+
+  /* Neutral */
+  --color-Gray-50: hsl(0, 0%, 98%);
+  --color-Gray-500: hsl(0, 0%, 41%);
+  --color-Gray-950: hsl(0, 0%, 8%);
+
+  /**************/
+  /* Typography */
+  /**************/
+
+  /* Body Copy */
+  --text-c-paragraph: 18px;
+
+  /* Font */
+  --font-weight-c-normal: 500;
+  --font-weight-c-bold: 700;
+}
